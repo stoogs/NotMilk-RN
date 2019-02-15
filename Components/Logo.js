@@ -5,7 +5,7 @@ export default class Logo extends React.Component {
   render() {
     return (
       <View>
-        <Text>LOGO</Text>
+        <Text>LOGO COMPONENT</Text>
       </View>
     );
   }

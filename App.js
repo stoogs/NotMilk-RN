@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import Logo from './Logo';
+import Logo from './Components/Logo';
 import Heading from './Components/Heading';
 
 export default class App extends React.Component {
@@ -14,30 +14,35 @@ constructor() {
   render() {
     return (
       <View style={styles.container}>
-      <View style={styles.logo}><Text>Logo</Text></View>
+
+        <View style={styles.logo}>
+          <Logo />
+        </View>
+
         <View style={styles.heading}>
           <Heading title={this.state.nutChoice} />
         </View>
-      <View style={styles.nutchoice}>
-        <Button 
-          title="Pecan"
-          onPress={() => this.setState({ nutChoice: 'Pecan'})}
-        /> 
-        <Button 
-          title="Almond"
-          onPress={() => this.setState({ nutChoice: 'Almond'})}
-        /> 
-         <Button 
-          title="Cashew"
-          onPress={() => this.setState({ nutChoice: 'Cashew'})}
-        /> 
-         <Button 
-          title="Pistachio"
-          onPress={() => this.setState({ nutChoice: 'Pistachio'})}
-        /> 
-      </View>
-      <View style={styles.settings}><Text>Settings Here</Text></View>
-      <View style={styles.results}><Text>Results Here</Text></View>
+
+        <View style={styles.nutchoice}>
+          <Button 
+            title="Pecan"
+            onPress={() => this.setState({ nutChoice: 'Pecan'})}
+          /> 
+          <Button 
+            title="Almond"
+            onPress={() => this.setState({ nutChoice: 'Almond'})}
+          /> 
+          <Button 
+            title="Cashew"
+            onPress={() => this.setState({ nutChoice: 'Cashew'})}
+          /> 
+          <Button 
+            title="Pistachio"
+            onPress={() => this.setState({ nutChoice: 'Pistachio'})}
+          /> 
+        </View>
+        <View style={styles.settings}><Text>Settings Here</Text></View>
+        <View style={styles.results}><Text>Results Here</Text></View>
       </View>
     );
   }
