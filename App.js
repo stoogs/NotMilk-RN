@@ -1,48 +1,31 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import Logo from './Components/Logo';
-import Heading from './Components/Heading';
+import Logo from './Containers/Logo';
+import Heading from './Containers/Heading';
+import Choices from './Containers/Choices';
+import Settings from './Containers/Settings';
+import Results from './Containers/Results';
 
 export default class App extends React.Component {
-constructor() {
-  super();
-  this.state = {
-    nutChoice: 'Choose Nut',
-  };
-}
-
   render() {
     return (
+    
       <View style={styles.container}>
-
         <View style={styles.logo}>
           <Logo />
         </View>
-
         <View style={styles.heading}>
-          <Heading title={this.state.nutChoice} />
+          <Heading />
         </View>
-
-        <View style={styles.nutchoice}>
-          <Button 
-            title="Pecan"
-            onPress={() => this.setState({ nutChoice: 'Pecan'})}
-          /> 
-          <Button 
-            title="Almond"
-            onPress={() => this.setState({ nutChoice: 'Almond'})}
-          /> 
-          <Button 
-            title="Cashew"
-            onPress={() => this.setState({ nutChoice: 'Cashew'})}
-          /> 
-          <Button 
-            title="Pistachio"
-            onPress={() => this.setState({ nutChoice: 'Pistachio'})}
-          /> 
+        <View style={styles.choices}>
+          <Choices />
         </View>
-        <View style={styles.settings}><Text>Settings Here</Text></View>
-        <View style={styles.results}><Text>Results Here</Text></View>
+        <View style={styles.settings}>
+          <Settings />
+        </View>
+        <View style={styles.results}>
+          <Results />
+        </View>
       </View>
     );
   }
@@ -56,7 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
-    flex: 3,
+    flex: 2,
     backgroundColor: '#eee',
     width: '100%',
     alignItems: 'center',
@@ -69,9 +52,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  nutchoice: {
+  choices: {
     flex: 2,
-    flexDirection: 'row',
     backgroundColor: '#ccc',
     width: '100%',
     alignItems: 'center',

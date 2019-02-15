@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 
+import Heading from './Heading';
+
 export default class Choices extends React.Component {
   constructor() {
     super();
@@ -10,55 +12,39 @@ export default class Choices extends React.Component {
   }
   render() {
     return (
-      
+
       <View style={styles.container}>
+
         <Button 
-          title="Pecan"
-          onPress={() => this.setState({ nutChoice: 'Pecan' + ' Milk'})}
-        /> 
-        <Button 
-          title="Almond"
-          onPress={() => this.setState({ nutChoice: 'Almond' + ' Milk'})}
-        /> 
-         <Button 
-          title="Cashew"
-          onPress={() => this.setState({ nutChoice: 'Cashew' + ' Milk'})}
-        /> 
-         <Button 
-          title="Pistachio"
-          onPress={() => this.setState({ nutChoice: 'Pistachio' + ' Milk'})}
-        /> 
-      </View>
+            title="Peucan"
+            onPress={() => this.setState({ nutChoice: 'Pecan' + ' Milk'})}
+          /> 
+          <Button 
+            title="Almond"
+            onPress={() => this.setState({ nutChoice: 'Almond' + ' Milk'})}
+          /> 
+          <Button 
+            title="Cashew"
+            onPress={() => this.setState({ nutChoice: 'Cashew' + ' Milk'})}
+          /> 
+          <Button 
+            title="Pistachio"
+            onPress={() => this.setState({ nutChoice: 'Pistachio' + ' Milk'})}
+          /> 
+        </View>
+     
     );
   }
 }
 
 const styles = StyleSheet.create({
-    container: {
+  container: {
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: '#ccc',
+    backgroundColor: '#eee',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
     },
+  
   });
-
-
-
-// <Button 
-//           title="Pecan"
-//           onPress={() => this.setState({ nutChoice: 'Pecan' + ' Milk'})}
-//         /> 
-//         <Button 
-//           title="Almond"
-//           onPress={() => this.setState({ nutChoice: 'Almond' + ' Milk'})}
-//         /> 
-//          <Button 
-//           title="Cashew"
-//           onPress={() => this.setState({ nutChoice: 'Cashew' + ' Milk'})}
-//         /> 
-//          <Button 
-//           title="Pistachio"
-//           onPress={() => this.setState({ nutChoice: 'Pistachio' + ' Milk'})}
-//         /> 
