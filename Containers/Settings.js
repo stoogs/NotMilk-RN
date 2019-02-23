@@ -5,7 +5,7 @@ export default class Settings extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.titleText}>SETTINGS FROM COMPONENT</Text>
+        <Text style={styles.titleText} ></Text>
       </View>
     );
   }

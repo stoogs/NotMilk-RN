@@ -5,7 +5,7 @@ export default class Results extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.titleText}>RESULTS FROM COMPONENT</Text>
+        <Text style={styles.titleText}>{this.props.choice} {this.props.servings} { this.props.consistency } </Text>
       </View>
     );
   }

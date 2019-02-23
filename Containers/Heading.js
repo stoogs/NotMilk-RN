@@ -5,7 +5,7 @@ export default class Heading extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.titleText}>Heading</Text>
+        <Text style={styles.titleText}>{this.props.choice} Milk</Text>
       </View>
     );
   }
