@@ -6,7 +6,7 @@ export default class Heading extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.titleText}>
-         {this.props.chosen} Milk
+         {this.props.chosen}
         </Text>
       </View>
     );
@@ -20,9 +20,10 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
   titleText: {
-    fontSize: 48,
+    fontSize: 42,
     textAlign: 'center',
   },
 });

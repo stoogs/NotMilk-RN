@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View, Image } from 'react-native';
+import { Button, StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 import Logo from './Containers/Logo';
 import Heading from './Containers/Heading';
 import Choice from './Containers/Choice';
@@ -45,26 +45,33 @@ render () {
         </View>
         
         <View style={styles.choice}>
-          <Image style={styles.nutImage}
-            source={require("./assets/png//WithoutShells/pecan.png")}
-            onPress={this.chosen="Boo"} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/almond.png")} 
-          onPress={this.chooseNut.bind(this, this.state.nutNames[1])} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/cashew.png")} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/pistachio.png")} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/macadamia.png")} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/hazelnut.png")} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/brazil.png")} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/walnut.png")} />
-          <Image style={styles.nutImage}
-          source={require("./assets/png//WithoutShells/coconut.png")} />
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[0])}>
+            <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/pecan.png")} />
+          </TouchableHighlight>  
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[1])}>
+            <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/almond.png")} />
+          </TouchableHighlight>   
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[2])}>  
+            <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/cashew.png")} />
+          </TouchableHighlight>   
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[3])}>
+            <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/pistachio.png")} />
+          </TouchableHighlight>   
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[4])}>
+            <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/macadamia.png")} />
+          </TouchableHighlight>   
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[5])}>  
+            <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/hazelnut.png")} />
+          </TouchableHighlight>   
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[6])}>  
+          <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/brazil.png")} />
+          </TouchableHighlight>   
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[7])}>  
+          <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/walnut.png")} />
+          </TouchableHighlight>  
+          <TouchableHighlight onPress={this.chooseNut.bind(this, this.state.nutNames[8])}>  
+          <Image style={styles.nutImage} source={require("./assets/png//WithoutShells/coconut.png")} />
+          </TouchableHighlight>  
         </View>
         
         <View style={styles.settings}>
@@ -83,20 +90,20 @@ render () {
 const styles = StyleSheet.create({
   container: {
     flex: 18,
-    backgroundColor: '#fff',
+    backgroundColor: '#FBFBF2',
     alignItems: 'center',
     justifyContent: 'center',
   },
   logo: {
     flex: 3,
-    backgroundColor: '#eee',
+    backgroundColor: '#FBFBF2',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
   heading: {
     flex: 1,
-    backgroundColor: '#ddd',
+    backgroundColor: '#FBFBF2',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -104,7 +111,7 @@ const styles = StyleSheet.create({
   choice: {
     flex: 2,
     flexDirection: 'row',
-    backgroundColor: '#ccc',
+    backgroundColor: '#FBFBF2',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
