@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, Image } from 'react-native';
 import Logo from './Containers/Logo';
 import Heading from './Containers/Heading';
+import Choice from './Containers/Choice';
 import Settings from './Containers/Settings';
 import Results from './Containers/Results';
 import Slider from './Components/Slider';
@@ -28,8 +29,11 @@ export default class App extends React.Component {
       option4: false,   //cardamon
     }
   }
+
+  chooseNut = (chosen) => { this.setState({ chosen: chosen }) }
+
+
 render () {
-  <img src={require("./assets/Logo/notmilklogo.png")} />
     return (
       <View style={styles.container}>
         <View style={styles.logo}>
@@ -37,26 +41,30 @@ render () {
         </View>
 
         <View style={styles.heading}>
-          <Heading choice={this.state.chosen}/>
+          <Heading chosen={this.state.chosen}/>
         </View>
         
-        <View style={styles.choices}>
-          <Button 
-              title="Pecan"
-              onPress={() => this.setState({ nutChoice: 'Pecan'})}
-            /> 
-            <Button 
-              title="Almond"
-              onPress={() => this.setState({ nutChoice: 'Almond'})}
-            /> 
-            <Button 
-              title="Cashew"
-              onPress={() => this.setState({ nutChoice: 'Cashew'})}
-            /> 
-            <Button 
-              title="Pistachio"
-              onPress={() => this.setState({ nutChoice: 'Pistachio'})}
-            /> 
+        <View style={styles.choice}>
+          <Image style={styles.nutImage}
+            source={require("./assets/png//WithoutShells/pecan.png")}
+            onPress={this.chosen="Boo"} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/almond.png")} 
+          onPress={this.chooseNut.bind(this, this.state.nutNames[1])} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/cashew.png")} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/pistachio.png")} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/macadamia.png")} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/hazelnut.png")} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/brazil.png")} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/walnut.png")} />
+          <Image style={styles.nutImage}
+          source={require("./assets/png//WithoutShells/coconut.png")} />
         </View>
         
         <View style={styles.settings}>
@@ -93,13 +101,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  choices: {
+  choice: {
     flex: 2,
     flexDirection: 'row',
     backgroundColor: '#ccc',
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  nutImage: {
+    height: 80,
+    width: 40,
+    resizeMode: 'contain'
   },
   settings: {
     flex: 6,

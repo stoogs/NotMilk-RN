@@ -1,7 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import Image from 'react-native-remote-svg';
-
+import { StyleSheet, View, Text, Image } from 'react-native';
 
 export default class Logo extends React.Component {
   render() {
